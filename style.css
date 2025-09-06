@@ -1,0 +1,197 @@
+/* General Styling for Pixel Look */
+body {
+    font-family: 'Press Start 2P', cursive; /* Pixel font */
+    background-color: #2c3e50; /* Darker, retro background */
+    color: #ecf0f1; /* Lighter text for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    image-rendering: pixelated; /* Crucial for sharp pixel images */
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.app-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.card {
+    background-color: #34495e; /* Darker card background */
+    border-radius: 5px; /* Sharper corners for pixel look */
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.4); /* Pixelated shadow */
+    padding: 30px;
+    border: 2px solid #5d6d7e; /* Border for pixel effect */
+}
+
+h2 {
+    text-align: center;
+    color: #e67e22; /* Retro accent color */
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.2rem; /* Adjust font size for pixel font legibility */
+}
+
+/* Digital Pet Styling */
+.pet-container {
+    text-align: center;
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#pet-display {
+    width: 96px; /* Larger base size for pixel art */
+    height: 96px;
+    margin-bottom: 15px;
+    image-rendering: pixelated; /* Ensure pet image stays pixelated */
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    transition: transform 0.1s ease-out; /* Keep a subtle animation */
+}
+
+#pet-status {
+    color: #bdc3c7;
+    font-weight: 400;
+    min-height: 20px;
+    font-size: 0.8rem;
+}
+
+
+/* Pomodoro Timer Styling */
+.pomodoro-container {
+    text-align: center;
+}
+
+#timer-display {
+    font-size: 4rem; /* Adjusted for pixel font */
+    font-weight: normal;
+    color: #f1c40f; /* Yellowish retro timer color */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2); /* Pixelated text shadow */
+}
+
+.timer-controls button {
+    background-color: #e67e22; /* Orange retro button */
+    color: #ffffff;
+    border: 2px solid #d35400; /* Darker border for button */
+    padding: 8px 16px;
+    border-radius: 3px; /* Sharper button corners */
+    font-size: 0.75rem; /* Smaller font for buttons */
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.1s, transform 0.1s;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3); /* Pixelated button shadow */
+}
+
+.timer-controls button:hover {
+    background-color: #d35400;
+    transform: translate(1px, 1px); /* Simple pixel "press" effect */
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* To-Do List Styling */
+.todo-input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#todo-input {
+    flex-grow: 1;
+    border: 2px solid #5d6d7e;
+    border-radius: 3px;
+    padding: 8px 12px;
+    font-size: 0.75rem;
+    background-color: #2c3e50; /* Dark input background */
+    color: #ecf0f1;
+}
+
+#todo-input::placeholder {
+    color: #95a5a6;
+}
+
+#todo-input:focus {
+    outline: none;
+    border-color: #f1c40f; /* Yellow focus border */
+}
+
+#add-task-btn {
+    background-color: #27ae60; /* Green retro button */
+    color: white;
+    border: 2px solid #229954;
+    padding: 8px 16px;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.1s, transform 0.1s;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+#add-task-btn:hover {
+    background-color: #229954;
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#task-list li {
+    background-color: #4a667b; /* Slightly lighter task background */
+    padding: 12px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    word-break: break-word;
+    font-size: 0.8rem;
+    border: 1px solid #5d6d7e;
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s;
+}
+
+#task-list li:hover {
+    transform: translate(1px, -1px);
+}
+
+.delete-btn {
+    background-color: #c0392b; /* Red retro delete button */
+    color: white;
+    border: 2px solid #a93226;
+    padding: 4px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 0.65rem;
+    transition: background-color 0.1s;
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.delete-btn:hover {
+    background-color: #a93226;
+    transform: translate(0.5px, 0.5px);
+    box-shadow: 0.5px 0.5px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .pet-container {
+        grid-column: auto;
+        order: -1;
+    }
+}
