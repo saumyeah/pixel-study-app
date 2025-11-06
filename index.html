@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <div class="card pet-container">
+            <div id="pet-title" class="pet-title">🤖</div>
+            <div id="pet-status">Ready to be productive!</div>
+        </div>
+
+        <div class="card pomodoro-container">
+            <h2>Pomodoro Timer</h2>
+            <div class="timer-modes">
+                <button class="mode-btn active" data-time="1500">Pomodoro</button>
+                <button class="mode-btn" data-time="300">Short Break</button>
+                <button class="mode-btn" data-time="900">Long Break</button>
+            </div>
+            <div id="timer-display">25:00</div>
+            <div class="timer-controls">
+                <button id="start-btn">Start</button>
+                <button id="pause-btn">Pause</button>
+                <button id="reset-btn">Reset</button>
+            </div>
+        </div>
+
+        <div class="card todo-container">
+            <h2>To-Do List</h2>
+            <div class="progress-container">
+                <span id="progress-text">0/0 Tasks Completed</span>
+                <div class="progress-bar-background">
+                    <div id="progress-bar" class="progress-bar-fill"></div>
+                </div>
+            </div>
+            <div class="todo-input-container">
+                <input type="text" id="todo-input" placeholder="Add a new task...">
+                <button id="add-task-btn">Add</button>
+            </div>
+            <ul id="task-list">
+                </ul>
+        </div>
+
+        <div class="card scratchpad-container">
+            <h2>Scratchpad</h2>
+            <textarea id="scratchpad" placeholder="Jot down your thoughts..."></textarea>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
